@@ -1,0 +1,13 @@
+body {
+  width: 90%;
+  margin: 0 auto;
+  background-color: lightgrey;
+}
+#wrapper {
+  background-color: white;
+}
+h1 {
+  margin: 1% 0%;
+  padding: .25em;
+  background-color: #efefef;
+}
