@@ -11,3 +11,15 @@ h1 {
   padding: .25em;
   background-color: #efefef;
 }
+ul {
+  text-align: center;
+}
+h1, p {
+  text-align: center;
+}
+#content {
+  overflow: auto;
+}
+#nav, #feature, #footer {
+  margin: 1% 0%;
+}
