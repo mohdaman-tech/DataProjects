@@ -23,3 +23,32 @@ h1, p {
 #nav, #feature, #footer {
   margin: 1% 0%;
 }
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+}
+
+.column1 {
+  float: left;
+}
+.column2 {
+  margin: 0% 3%;
+}
+.column3 {
+  float: right;
+  margin: 0%;
+}
+
+li {
+  display: inline;
+  padding: 0.5em;
+}
+#nav, #footer {
+  background-color: #efefef;
+  padding: 0.5em 0;
+}
+#feature, .article {
+  background-color: #efefef;
+  height: 10em;
+  margin-bottom: 1em;
+}
