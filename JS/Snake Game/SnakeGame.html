@@ -9,3 +9,25 @@ canvas { border:7px dashed #4A4747 }
 h1 { font-size:35px; text-align: center; margin: 0; padding-bottom: 25px; text-decoration: underline; font-family: Geneva; color: #0520A5;}
 </style>
 <script type="text/javascript">
+function play_game()
+{
+var level = 160; // Game level, by decreasing will speed up
+var rect_w = 45; // Width
+var rect_h = 30; // Height
+var inc_score = 50; // Score
+var snake_color = "#0520A5"; // Snake Color
+var ctx; // Canvas attributes
+var tn = []; // temp directions storage
+var x_dir = [-1, 0, 1, 0]; // position adjusments
+var y_dir = [0, -1, 0, 1]; // position adjusments
+var queue = [];
+var frog = 1; // defalut food
+var map = [];
+var MR = Math.random;
+var X = 5 + (MR() * (rect_w - 10))|0; // Calculate positions
+var Y = 5 + (MR() * (rect_h - 10))|0; // Calculate positions
+var direction = MR() * 3 | 0;
+var interval = 0;
+var score = 0;
+var sum = 0, easy = 0;
+var i, dir;
