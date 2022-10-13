@@ -33,6 +33,20 @@ var sum = 0, easy = 0;
 var i, dir;
 // getting play area 
 var c = document.getElementById('playArea');
+  // random placement of snake food
+function random_snake()
+{
+var x, y;
+do
+{
+x = MR() * rect_w|0;
+y = MR() * rect_h|0;
+}
+while (map[x][y]);
+map[x][y] = 1;
+ctx.fillStyle = snake_color;
+ctx.strokeRect(x * 10+1, y * 10+1, 8, 8);
+}
 ctx = c.getContext('2d');
 // Map positions
 for (i = 0; i < rect_w; i++)
