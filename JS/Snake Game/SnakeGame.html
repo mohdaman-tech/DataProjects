@@ -33,6 +33,7 @@ var sum = 0, easy = 0;
 var i, dir;
 // getting play area 
 var c = document.getElementById('playArea');
+  
   // random placement of snake food
 function random_snake()
 {
@@ -79,4 +80,25 @@ score+= Math.max(5, inc_score);
 inc_score = 50;
 random_snake();
 frog++;
+}
+  //ctx.fillStyle("#ffffff");
+ctx.fillRect(X * 10, Y * 10, 9, 9);
+map[X][Y] = 2;
+queue.unshift([X, Y]);
+X+= x_dir[direction];
+Y+= y_dir[direction];
+if (frog < queue.length)
+{
+dir = queue.pop()
+map[dir[0]][dir[1]] = 0;
+ctx.clearRect(dir[0] * 10, dir[1] * 10, 10, 10);
+}
+}
+else if (!tn.length)
+{
+var show_score = document.getElementById("show");
+show_score.innerHTML = "You lose!<br /> <u>Your Score:</u> <b>"+score+"</b><br><br> Want to try again?<br><br><input type='button' value='Play Again' onclick='window.location.reload();' />";
+document.getElementById("playArea").style.display = 'none';
+window.clearInterval(interval);
+}
 }
