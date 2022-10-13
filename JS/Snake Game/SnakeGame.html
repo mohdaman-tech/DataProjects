@@ -31,3 +31,11 @@ var interval = 0;
 var score = 0;
 var sum = 0, easy = 0;
 var i, dir;
+// getting play area 
+var c = document.getElementById('playArea');
+ctx = c.getContext('2d');
+// Map positions
+for (i = 0; i < rect_w; i++)
+{
+map[i] = [];
+}
