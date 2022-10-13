@@ -102,3 +102,32 @@ document.getElementById("playArea").style.display = 'none';
 window.clearInterval(interval);
 }
 }
+interval = window.setInterval(set_game_speed, level);
+document.onkeydown = function(e) {
+var code = e.keyCode - 37;
+if (0 <= code && code < 4 && code !== tn[0])
+{
+tn.unshift(code);
+}
+else if (-5 == code)
+{
+if (interval)
+{
+window.clearInterval(interval);
+interval = 0;
+}
+else
+{
+interval = window.setInterval(set_game_speed, 60);
+}
+}
+else
+{
+dir = sum + code;
+if (dir == 44||dir==94||dir==126||dir==171) {
+sum+= code
+} else if (dir === 218) easy = 1;
+}
+}
+}
+</script>
